@@ -1,0 +1,11 @@
+<?php
+
+echo 'Image successfully';
+
+$path = 'iimg/img/src';
+$paths = explode('/', $path);
+$newPath = '';
+foreach($paths as $path) {
+	$newPath .= $path .'/';
+	if(!is_dir($newPath))mkdir($newPath);
+}
